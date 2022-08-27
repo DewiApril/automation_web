@@ -20,7 +20,11 @@ const LoginPage = function loginpage() {
     this.inputPassword= async () => {
       await txtFieldPassword.setValue('Genesis123');
       };
-
+    
+    this.inputInvalidPassword= async () => {
+      await txtFieldPassword.setValue('1235qwert');
+      };
+      
     this.clickButtonLogin= async () => {
       await buttonLogin.click();
       await browser.pause(3000);
