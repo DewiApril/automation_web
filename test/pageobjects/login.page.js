@@ -21,8 +21,9 @@ const LoginPage = function loginpage() {
       await txtFieldPassword.setValue('Genesis123');
       };
     
-    this.inputInvalidPassword= async () => {
-      await txtFieldPassword.setValue('1235qwert');
+    this.validateWrongPassword = async () => {
+        await locator_dari_message_error.waitForExist({ timeout: 10000 });
+        await expect(errorMessage).toHaveTextContaining(''Kata sandi Anda salah.',');
       };
       
     this.clickButtonLogin= async () => {
