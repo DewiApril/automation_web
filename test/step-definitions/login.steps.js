@@ -21,8 +21,20 @@ When('I input invalid password', async () => {
     await login.inputInvalidPassword();
   });
 
+When('I input invalid username', async () => {
+    await login.inputInvalidEmail();
+  });
+
+Then('User get error wrong password', async () => {
+    await login.validateWrongPassword();
+  });
+
+Then('User get error wrong username', async () => {
+  await login.validateWrongEmail();
+  });
+
 Then('Dashboard page will be displayed', async () => {
-    await login.VerifyHomePage();
-    // await login.closeAdsPopup();
+    await login.closeAdsPopup(); 
+    await login.VerifyHomePage();   
   });
 
