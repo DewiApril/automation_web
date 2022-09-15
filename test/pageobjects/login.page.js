@@ -6,6 +6,7 @@ const closePopup = $('//*[@id="app"]/div[2]/div[1]/div[1]');
 const lblUserName = $('//*[@id="app"]/div/div[2]/div[1]/div/div[1]/div[1]/div');
 const errorWrongPassword = $('//*[@id="app"]/div/form/p[2]');
 const errorWrongUsername= $('/html[1]/body[1]/div[1]/div[1]/div[1]/form[1]/p[2]');
+const errorEmptyEmail= $
 
 const LoginPage = function loginpage() {
     this.navigateLionParcel= async () => {
